@@ -27,6 +27,9 @@ new Vue({
   		
   		this.x = event.offsetX;
   		this.y = event.offsetY;
+  	},
+  	badclick: function(){
+  		alert('You should not have clicked me');
   	}
   }
 });
