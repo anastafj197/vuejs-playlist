@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>VueJs Tutotials</title>
-    <link href="style.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-  </head>
-  <body>
-	  
-  <div id="vue-app">
-    <h1>{{ name }}</h1>
-  </div>
-	  
-  <script src="app.js"></script>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>VueJs Tutotials</title>
+		<link href="style.css" rel="stylesheet"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<body>
+	<!-- data in app is only accessable inside this div -->
+	<div id="vue-app">
+		<h1>{{ greet('afternoon') }}</h1>
+		<p>{{ name }}</p>
+		<p>{{ job }}</p>
+		<!-- directive telling vue to bind attribute to dynamic data -->
+		<a v-bind:href= "website">Linkedin</a>
+		<input type="text" v-bind:value= "name"/>
+		<p v-html="websiteTag"></p>
+	</div>
+
+		<script src="app.js"></script>
+	</body>
 </html>
