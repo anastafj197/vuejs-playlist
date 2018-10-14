@@ -1,6 +1,9 @@
 // One view instance to control entire app
 new Vue({
   // import div id from index 
+// One view instance to control entire app
+new Vue({
+  // import div id from index 
   // Vuejs takes all properties in data object 
   // Proxies them to the top of the Vue instance 
   el:'#vue-app',
@@ -30,6 +33,12 @@ new Vue({
   	},
   	badclick: function(){
   		alert('You should not have clicked me');
+  	},
+  	logName: function(){
+  		console.log("You entered your name");
+  	},
+  	logAge: function(){
+  		console.log("You entered your age");
   	}
   }
 });
