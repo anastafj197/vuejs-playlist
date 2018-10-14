@@ -9,8 +9,10 @@
 	<body>
 	<!-- data in app is only accessable inside this div -->
 	<div id="vue-app">
+		<!-- 2-way data binding -->
 		<input type="text" v-model="name">
 		<input type="text" v-model="age" >
+		
 		<h1>{{ greet('afternoon') }}</h1>
 		<p>{{ name }}</p>
 		<p>{{ job }}</p>
