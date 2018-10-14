@@ -9,6 +9,8 @@
 	<body>
 	<!-- data in app is only accessable inside this div -->
 	<div id="vue-app">
+		<input type="text" v-model="name">
+		<input type="text" v-model="age" >
 		<h1>{{ greet('afternoon') }}</h1>
 		<p>{{ name }}</p>
 		<p>{{ job }}</p>
@@ -31,9 +33,14 @@
 		<h1>Keyboard Events</h1>
 		<label>Name:</label>
 		<input type="text" v-on:keyup.enter="logName" />
+		
+		<span>{{ name }}</span>
+
 		<label>Age:</label>
 		<!-- only works when press alt + enter -->
 		<input type="text" v-on:keyup.alt.enter="logAge" />
+		
+		<span>{{ age }}</span>
 
 	</div>
 
