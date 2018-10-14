@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VueJs Tutotials</title>
+		<link href="style1.css" rel="stylesheet"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<body>
+	<!-- data in app is only accessable inside this div -->
+	<div id="vue-app">
+		<h1>Dynamic CSS</h1>
+		<h2>Example 1</h2>
+		<div v-on:click="available = !available" v-bind:class="{available: available}">
+			<span>Ryu</span>
+		</div>
+		<h2>Example 2</h2>
+		<button v-on:click="nearby = !nearby">Toggle nearby</button>
+		<button v-on:click="available = !available">Toggle available</button>
+		<div v-bind:class="compClasses">
+		<span>Riku</span>
+		</div>
+
+	</div>
+
+		<script src="app1.js"></script>
+	</body>
+</html>
