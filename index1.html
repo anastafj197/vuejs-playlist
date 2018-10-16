@@ -32,8 +32,20 @@
 
 		<h1>Looping through lists</h1>
 		<ul>
-			<li v-for="character in characters">{{character}}</li>
+			<li v-for="(character, index) in characters">{{index}} . {{character}}</li>
 		</ul>
+		<ul>
+			<li v-for="(thing, index) in things">{{thing.name}} - {{thing.dps}}</li>
+		</ul>
+		<template v-for="(thing, index) in things">
+			<h3>{{thing.name}}</h3>
+			<p>{{thing.dps}}</p>
+		</template>
+		<template v-for="thing in things">
+			<div v-for="(val, key) in thing">
+				<p>{{key}} - {{val}}</p>
+			</div>
+		</template>
 
 	</div>
 
